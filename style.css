@@ -50,7 +50,6 @@ header {
   text-decoration: none;
   color: #41463d;
   font-size: 16px;
-  font-family: "Arvo", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -86,6 +85,8 @@ header {
   }
 }
 
+/********* FORSIDE *****************/
+
 /********** Hero image *************/
 
 .hero {
@@ -97,7 +98,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #70a0af;
   text-align: center;
 }
 
@@ -138,6 +139,15 @@ header {
   }
 }
 
+/* Text section */
+
+.text-section h2 {
+  text-align: center;
+}
+.text-section p {
+  text-align: center;
+}
+
 /* Image Grid Section */
 
 .image-grid {
@@ -167,8 +177,8 @@ header {
   color: white;
   margin: 0;
   background: #70a0af;
-  border: 2px solid #41463d; /* Tilføjer en kant rundt om teksten */
-  padding: 5px 10px; /* Justér afstand mellem tekst og kant */
+  border: 2px solid #41463d;
+  padding: 5px 10px;
   text-align: center;
 }
 
@@ -185,7 +195,7 @@ header {
 
 .footer {
   background-color: #111;
-  color: #fff;
+  color: #f2f2f2;
   padding: 40px 20px;
   display: flex;
   flex-wrap: wrap;
@@ -256,28 +266,26 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 5px;
+  margin-top: 31px;
 }
 
 .contact-info img {
   width: 24px;
   height: 24px;
-  filter: invert(100%);
 }
 
 .contact-info a {
-  color: #70a0af;
+  color: #fff;
   text-decoration: none;
 }
 
 .contact-info a:hover {
-  text-decoration: underline;
+  color: #70a0af;
 }
 
 .footer-bottom {
   flex-basis: 100%;
   margin-top: 40px;
-  font-size: 0.9rem;
   text-align: center;
 }
 
@@ -288,4 +296,41 @@ header {
 
 .footer-bottom a:hover {
   text-decoration: underline;
+}
+
+/************ 02_Web **************/
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  gap: 20px;
+}
+
+.text {
+  flex: 1;
+}
+
+.image {
+  flex: 1;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .image {
+    order: 1;
+  }
+
+  .text {
+    order: 2;
+  }
 }

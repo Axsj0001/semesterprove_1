@@ -1,7 +1,14 @@
-const burger = document.getElementById("burger");
-const menu = document.getElementById("menu");
+const burger = document.querySelector(".burger");
+const nav = document.querySelector("nav");
+const menu = document.querySelector(".menu");
 
-// Toggle menu visibility on burger click
-burger.addEventListener("click", () => {
-  menu.classList.toggle("active");
-});
+burger.addEventListener("click", burgerClick);
+function burgerClick() {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+}
+menu.addEventListener("click", menuClick);
+function menuClick() {
+  burger.classList.remove("active");
+  nav.classList.remove("active");
+}

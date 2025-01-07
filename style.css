@@ -9,7 +9,11 @@ img {
   display: block;
 }
 /************* Menu ********************/
-
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 .burger {
   display: block;
   width: 30px;
@@ -131,7 +135,6 @@ header .logo {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .hero-text {
@@ -150,6 +153,11 @@ header .logo {
   text-align: center;
   padding: 5px;
 }
+.grid_5col img {
+  height: 265px;
+  width: 440px;
+  object-fit: cover;
+}
 .grid_5col a {
   text-decoration: none;
   color: black;
@@ -163,6 +171,12 @@ header .logo {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
+    object-fit: cover;
+  }
+  .grid_5col img {
+    height: 250px;
+    width: 284px;
+    object-fit: cover;
   }
   .column {
     display: flex;
@@ -173,15 +187,27 @@ header .logo {
 /******* Footer **********/
 footer {
   text-align: center;
+  margin-top: 50px;
+  padding-bottom: 15px;
 }
 .footer_menu a {
   text-decoration: none;
   padding: 5px;
 }
-/************ 02_Web  ***************************************/
+/************ Sider  ***************************************/
+
+.tema_text {
+  color: #70a0af;
+  font-weight: 700;
+}
 
 .sektion_1 {
   padding: 5px;
+}
+.sektion_1 img {
+  height: 300px;
+  width: 445px;
+  object-fit: cover;
 }
 .sektion_1 a {
   font-weight: 700;
@@ -194,24 +220,51 @@ footer {
 .grid_3col {
   padding: 5px;
 }
-hr {
-  border-style: solid;
-  border-width: 2px;
-  color: #70a0af;
+
+.grid_3col p {
+  padding: 0 50px 0 50px;
+  text-align: center;
+}
+
+.grid_2col {
+  padding: 5px;
+}
+
+.grid_2col p {
+  padding: 0 50px 0 50px;
+  text-align: center;
 }
 
 h2 {
   text-align: center;
 }
 
-.tema_link a {
+.tema_link {
   text-align: center;
   text-decoration: none;
+}
+.tema_link {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 60px;
 }
 
 .tema_link img {
   height: 100%;
-  width: 15%;
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tema_link_web {
+  text-align: center;
+  text-decoration: none;
+}
+
+.tema_link_web img {
+  height: 100%;
+  width: 5%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -222,8 +275,21 @@ h2 {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
   }
+  .grid_2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
   .grid_3col img {
-    max-height: 370px;
+    height: 320px;
+    width: 480px;
+    object-fit: cover;
+  }
+
+  .grid_2col img {
+    height: 320px;
+    width: 725px;
+    object-fit: cover;
   }
   .column {
     display: flex;
@@ -231,5 +297,58 @@ h2 {
   }
   .sektion_1 .top_text {
     padding-right: 800px;
+  }
+  .sektion_1 img {
+    height: 690px;
+    width: 1460px;
+    object-fit: cover;
+  }
+}
+
+/******* Om mig ********/
+.top_sektion {
+  padding: 5px;
+}
+.top_sektion p {
+  text-align: center;
+  padding: 0 5px 30px 5px;
+}
+.cv_sektion p {
+  text-align: center;
+  padding: 0 5px 20px 5px;
+}
+.cv_sektion {
+  padding: 5px;
+}
+.cv_sektion {
+  text-align: center;
+  padding: 0 5px 0 5px;
+}
+.program_oversigt {
+  text-align: center;
+  padding: 50px;
+}
+
+.program_oversigt img {
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.program_text {
+  font-weight: 700;
+}
+@media screen and (min-width: 800px) {
+  .program_oversigt {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .program_oversigt p {
+    padding: 0 50px 0 50px;
+  }
+  .top_text p {
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

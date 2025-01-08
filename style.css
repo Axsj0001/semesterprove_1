@@ -297,6 +297,7 @@ h2 {
   margin-right: auto;
   transition: transform 0.2s;
 }
+
 .link_web_02 img {
   margin: auto;
   height: 100%;
@@ -305,12 +306,19 @@ h2 {
   margin-right: auto;
   transition: transform 0.2s;
 }
-
+.link_web_02 img:hover {
+  transform: scale(1.2);
+}
 .link_text {
   text-align: center;
   margin: auto;
 }
 @media screen and (min-width: 800px) {
+  .link_web_02 img {
+    height: 100%;
+    width: 7%;
+  }
+
   .text_2col {
     width: 85%;
     margin-left: auto;
